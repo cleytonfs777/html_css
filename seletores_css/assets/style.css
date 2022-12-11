@@ -1,0 +1,100 @@
+/* Seleciona todos os elementos existentes no html*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* Um elemento espaçado de outro significa "SELEÇÃO DE DESCENDENCIA" e indica que eu quero selecionar o filho que esta dentro do filho x*/
+/* Com relação ao emmet abreviation é semelhante a body>div>section*/
+body div section p {
+  color: red;
+}
+
+/* Quando se usa virgula podemos selecionar mais de um elemento para um mesmo conjunto de caracteristicas*/
+body div section span,
+body div section h2 {
+  color: green;
+}
+
+a,
+h3 {
+  color: rgb(255, 23, 112);
+}
+
+/* A ideia de selecionar conteudos internos utilizando espaços pode ser aplicado tbm com classes conforme o exemplo a seguir*/
+.main-content h2 {
+  background-color: yellow;
+}
+.main-content .heading {
+  font-weight: bold;
+}
+/*Nesse caso estamos dizendo que queremos um elemento que tenha a classe main-content e que tenha um h6 dentro cuja classe deverá ser heading*/
+.main-content h6.heading {
+  color: aqua;
+}
+
+/* Observe que se colocarmos uma propriedade em um elemento pai o elemento filho herdará essa característica. Dai esse fenomeno ser chamado de herança*/
+.pai {
+  color: red;
+}
+/*Quando utilizamos a propriedade initial todos os elementos mantem suas propriedades iniciais não herdando de seus pais. O contrario de initial seria a propriedade inherit que significa herdado*/
+div {
+  color: initial;
+}
+
+/* Se o texto estivesse colado dessa forma: .pai.filha não seriam selecionadas nenhuma das duas pois quando colamos as duas classes queremos dizer que o elemento deve ter as duas classes*/
+.pai .filha {
+  color: rgb(121, 121, 224);
+}
+
+/*Quando nos temos essa seta significa que queremos escolher somente as filhas e não as filhas das filhas. Aqui cortaria a questão de heraças...É chamado de child selector.... Vc pode utilizar quantos ' > ' desejar*/
+.pai > .filha {
+  color: grey;
+}
+
+/* O nome dessa propriedade é Adjacent sibling cominator, e ela seleciona o elemento 'irmão' que está 'adjacente' ao elemento selecionado, ou seja, que estiver imediatamente após*/
+.pais h1+p {
+    color: red;
+}
+/* É a mesma ideia de ter um h1 que esteja logo após um p*/
+.pais p+h1 {
+    color: rgb(217, 255, 1);
+}
+
+/* Temos tambem o general sibling selector que irá selecionar TODOS os elementos contidos no elemento antes do ~ que sejam o elemento após o ~*/
+.pais h1~p {
+    font-weight: bold;
+}
+
+/*Temos tambem os seletores de atributos que são responsáveis por selecionar todos os elementos que contenham o atributo. Nesse caso, selecionaremos os elementos com o atributo 'meu-atributo' colocando-o entre colchetes*/
+
+[meu-atributo] {
+    color: green;
+}
+/* Pode e dever ser adicionado algum valor ao atributo */
+[meu-atributo="valor"] {
+    color: rgb(255, 126, 6);
+}
+
+/* Nesse caso o simbolo ~ nos informa que precisamos desse atributo que tenha pelo menos o valor desejado. Poderá haver outros valores porem estes devem estar separados por espaço */
+[meu-novo-atributo~="valor2"] {
+  color: rgb(151, 35, 0);
+}
+
+/*Nesse caso em que temos o ^ antes do igual, queremos um atributo cujo valor comece pelo valor indicado*/
+[meu-atrib^="com"] {
+  color: rgb(67, 7, 102);
+  font-weight: bold;
+}
+
+/*Nesse caso em que temos o $ antes do igual, queremos um atributo cujo valor termine com o valor indicado*/
+[meu-atrib$="fim"] {
+  color: greenyellow;
+}
+
+/* Nesse ultimo caso, quando queremos qualquer elemento que contenha determinado valor em qualquer posição utilizaremos * como marcação de seleção*/
+[meu-atrib*="pipoca"] {
+  color: #fff;
+  background-color: red;
+}
+

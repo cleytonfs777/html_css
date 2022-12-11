@@ -1,0 +1,35 @@
+/*
+id     classes,atributos e pseudo-classes     Elementos e pseudo-elementos 
+1      0                                       0
+0      1                                       0                                                                 
+
+*/
+/*Selector Specificity: (1, 0, 0)*/
+#p {
+  background: rgb(221, 8, 8);
+}
+/*Selector Specificity: (0, 1, 0)*/
+.p {
+  background: rgb(221, 200, 8);
+}
+
+/* Quanto mais elementos se somar maior é a pontuação e especificidade
+O exemplo abaixo temos: Selector Specificity: (2, 2, 2)
+(dois ids, suas classes, dois elementos) = (2,2,2) 
+*/
+
+body#b.bclass p#p.p {
+  background-color: rgb(82, 16, 73);
+  color: #fff;
+}
+
+/*A palavra important muda o comportamento do navegador. Quanto ela é aplicada o navegador é obrigado a implementar a regra independente dos níveis de especificidade*/
+
+p {
+  background-color: rgb(14, 3, 112)!important;
+  color:green;
+}
+
+/*OBS: Se utilizar uma Tag 'style' ela é superior a todas as seleções, inclusive ao ID*/
+
+

@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: sans-serif;
+    font-size: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    /*Aqui está definido que eu terei 3 linhas e duas colunas*/
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas: 'header' 'header';
+}
+
+.grid div:nth-child(1){
+    /*Esse será o nome escolhido para realizar a manipulação das divs*/
+    grid-area: header;
+    background: red;
+}
+
+.grid div:nth-child(2){
+    /*Esse será o nome escolhido para realizar a manipulação das divs*/
+    grid-area: nav;
+}
+
+.grid div:nth-child(3){
+    /*Esse será o nome escolhido para realizar a manipulação das divs*/
+    grid-area: main;
+}
+
+.grid div:nth-child(4){
+    /*Esse será o nome escolhido para realizar a manipulação das divs*/
+    grid-area: rodape;
+}

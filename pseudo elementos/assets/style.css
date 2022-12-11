@@ -1,0 +1,39 @@
+/*o pseudo elemento after posiciona elemento após determinado elemento qualquer*/
+ul li::after{
+  /*Toda a vez que utilizamos esse pseudo-elemento precisamos colocar seu content(conteudo)*/
+  content:'Valor posterior';
+  background-color: rgb(139, 115, 245);
+  display: block;
+
+}
+/*o pseudo elemento before posiciona elemento antes determinado elemento qualquer*/
+ul li::before{
+  /*Toda a vez que utilizamos esse pseudo-elemento precisamos colocar seu content(conteudo)*/
+  content:' ** ';
+  background-color: rgb(137, 245, 115);
+  display: block;
+
+}
+/* confere a primeira letra de um elemento um determinado estilo*/
+p::first-letter{
+  font-size:50px;
+}
+
+/* confere a primeira linha de um elemento um determinado estilo*/
+p::first-line{
+  background-color: rgb(2, 8, 61);
+  color:rgb(88, 90, 90);
+}
+
+/*confere determinado estilo a partes do texto selecionados*/
+p::selection{
+  background-color: rgb(56, 4, 58);
+  color:beige;
+}
+
+/* Pode se alterar o estilo de um placeholder. Importante ressaltar que se não quiser alterar um placeholder específico pode ser inserido apenas */
+.entradinha::placeholder{
+  font-weight: bold;
+  font-family: Verdana, Geneva, sans-serif;
+  color: rgb(250, 58, 90);
+}

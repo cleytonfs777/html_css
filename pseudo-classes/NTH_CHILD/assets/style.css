@@ -1,0 +1,42 @@
+/*
+A contagem dos elementos filhos começa no índice um sempre
+    <ul>
+        <li></li> - indice 1
+        <li></li> - indice 2
+        <li></li> - indice 3
+        <li></li> - indice 4
+    </ul>
+
+OBS: Esse conceito é aplicado apenas para irmãos, ou seja, filhos do mesmo pai
+
+*/
+
+
+/* Seleciona todos os elementos na posição par de uma lista de itens*/
+ul.prima li:nth-child(even){
+  background-color: green;
+  color: white;
+}
+
+/* Seleciona todos os elementos na posição impar de uma lista de itens*/
+ul.prima li:nth-child(odd){
+  background-color: rgb(128, 0, 0);
+  color: white;
+}
+
+/* Seleciona um elemento em determinada posição*/
+ul.prima li:nth-child(3){
+  background-color: rgb(236, 252, 16);
+  color: rgb(24, 58, 11);
+}
+
+/* Seleciona de três em três elementos*/
+ul.sec li:nth-child(3n){
+  color: purple;
+}
+
+/* A partir do 5º elemento conte de 2 em 2*/
+ul.sec li:nth-child(2n+5){
+  color: rgb(253, 253, 253);
+  background-color: rgb(10, 3, 36);
+}

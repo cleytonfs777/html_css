@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex-container {
+    /*Semelhante ao inline-block*/
+    display: flex;
+    justify-content: space-between;
+    /*conbinação do flex-row (Elemento se ajusta linearmente) e o flex-wrap (Elemento quebra linha para caber)*/
+    align-items: flex-start;
+    flex-flow: row nowrap;
+    background: yellow;
+    height: 600px;
+}
+
+.flex-item {
+    /* O elemento poderá crescer na direção do espaço que estiver sobrando0 */
+    /* flex-grow: 1; */
+    /*Faz com que o elemento tenha minimamente 320px e se não couber ele quebrará linha mas continuará se espalhando*/
+    /* flex-basis: 320px; */
+    /*Se a propriedade flex-shrink estiver setada com o numero 1 ele permite que o elemento reduza abaixo da quantidade descrita em flex-basis. Se tiver 0 ele não permite*/
+    /* flex-shrink: 1; */
+    /*
+    ATALHOS
+          grow   shrink     basis
+    flex:   1       1       320px
+
+    Unidade de grow e de shrink são proporções, por exemplo se colocar 2 ele receberá 200% do espaço restante
+    */
+    /*Se vc utilizar a propriedade flex, vc poderá utilizar um atalho
+    flex: 1 1 320px;*/
+    width: 100%;
+    color: #fff;
+    background: red;
+    /* margin-bottom: 2%; */
+}
+
+/*
+.flex-item:nth-child(2) {
+    
+    flex: 10 1 320px;
+    background: purple;
+    align-self: flex-end;
+}
+
+.flex-item:nth-child(3) {
+align-self: center;
+}
+
+.flex-item:nth-child(4) {
+align-self: stretch;
+}
+*/

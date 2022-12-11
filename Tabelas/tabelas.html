@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        table {
+            /*Não deixa as linhas separadas e agrupa elas....O contrario é border-collapse: separate*/
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table td,
+        table th {
+            border: 1px solid #ccc;
+            padding: 5px;
+            text-align: left;
+        }
+
+        table caption {
+            caption-side: bottom;
+            text-align: center;
+            font-style: italic;
+            font-size: 16px;
+            margin-top: 5px;
+
+        }
+
+        tfoot td,
+        table th {
+            background: rgb(247, 115, 7);
+        }
+
+        .reponsive-table {
+            max-width: 100%;
+            overflow-x: auto;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tabela de investimentos</h1>
+
+</body>
+<div class="reponsive-table">
+    <table>
+        <caption>Contem todos os investimentos em criptoativos</caption>
+        <thead>
+            <tr>
+                <th>Moeda</th>
+                <th>Quantidade</th>
+                <th>Saldo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>BTC</td>
+                <td>3</td>
+                <td>U$ 600,000.00</td>
+            </tr>
+            <tr>
+                <td>ETH</td>
+                <td>12</td>
+                <td>U$ 1,200,000.00</td>
+            </tr>
+            <tr>
+                <td>USDT</td>
+                <td>39</td>
+                <td>U$ 400,000.00</td>
+            </tr>
+            <tr>
+                <td>USDT</td>
+                <td colspan="2">U$ 400,000.00</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>3 Pares</td>
+                <td>54</td>
+                <td>U$ 2,200,000.00</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+</html>

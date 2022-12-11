@@ -1,0 +1,25 @@
+display: flex;
+
+É o mesmo que dizer a seguinte sentença => flex-direction: row;
+
+
+justify-content: center; => Alinhamento horizontal ao centro
+align-items: center; => Alinhamento vertical ao centro
+
+
+diplay: inline => Não empurra os demais elementos
+
+display: block => Empurra todos os outros elementos
+
+
+border-collapse: collapse; => Unir as bordas de uma tabela
+
+
+Truque para criar barra de rolagem em elementos que não cabem na tela:
+
+.reponsive-table {
+    max-width: 100%;
+    overflow-x: auto;
+
+
+

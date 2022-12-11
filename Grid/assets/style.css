@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: sans-serif;
+    font-size: 20px;
+}
+.grid {
+    display: grid;
+    max-width: 600px;
+    margin: 0 auto;
+    /* Indica que eu quero uma grid de 2 colunas com 50% de tamanho para cada coluna 
+    grid-template-columns: 50% 50%;*/
+    /*
+    * A unidade fr significa fragmento, que é exatamente o restante que sobrar divida entre ele em partes iguais
+    * Fragmentos tbm são proporcionais. Se eu colocar 2fr significa que eu terei duas vezes o valor restante de fragmento
+    * grid-template-columns: 100px 1fr 2fr;
+    */
+    /* Uma outra questão pratica é usar a função repeat; 
+    grid-template-columns: repeat(2, 1fr 2fr);
+    grid-template-columns: repeat(4, 1fr);*/
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /*Gap é o espaçamento entre as grids*/
+    /*auto-fill significa que o preenchimento do numero de colunas será automático e que o tamanho máximo para quebrar o elemento será de 160px
+    Vc pode fazer as mesmas coisas usando grid-template-columns
+    
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.grid div {
+    background: darkgreen;
+    min-height: 60px;
+}
+
+.grid div:nth-child(5) {
+    background: darkred;
+    /* 
+    * Forma um pouco mais complexa de se fazer um span
+    grid-column-start: 2;
+    grid-column-end: 4; */
+    /* Forma mais simples de se fazer um span */
+    grid-column: span 2;
+    grid-row: span 2;
+}

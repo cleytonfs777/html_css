@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filhos</title>
+    <style>
+        /* Seleciona o primeiro item de uma lista de itens */
+        .pai .lista li:first-child {
+            background-color: rgb(247, 3, 3);
+        }
+
+        /* Seleciona o ultimo item de uma lista de itens */
+        .pai .lista li:last-child {
+            background-color: rgb(21, 252, 0);
+        }
+
+        /* Exclui os itens que possuem determinadas características*/
+        p:not(.montanha) {
+            color: rgb(138, 4, 4);
+        }
+
+        /* Exclui os itens que estão checked*/
+        input:not(:checked)+p {
+            color: rgb(223, 223, 6);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pai">
+        <ul class="lista">
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+        </ul>
+        <input type="checkbox">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla sint consequuntur voluptatum perferendis
+            iusto modi tempora placeat debitis impedit dicta ea suscipit excepturi quibusdam vitae, fugiat numquam
+            beatae consequatur cupiditate!</p>
+        <p class="montanha">Lorem30Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla sint consequuntur
+            voluptatum
+            perferendis iusto modi tempora placeat debitis impedit dicta ea suscipit excepturi quibusdam vitae, fugiat
+            numquam beatae consequatur cupiditate!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla sint consequuntur voluptatum perferendis
+            iusto modi tempora placeat debitis impedit dicta ea suscipit excepturi quibusdam vitae, fugiat numquam
+            beatae consequatur cupiditate!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla sint consequuntur voluptatum perferendis
+            iusto modi tempora placeat debitis impedit dicta ea suscipit excepturi quibusdam vitae, fugiat numquam
+            beatae consequatur cupiditate!</p>
+    </div>
+</body>
+
+</html>

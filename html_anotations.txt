@@ -1,0 +1,373 @@
+Elementos aninhados
+
+Simbolo: >
+
+Ex:.
+ENTRADA =>
+nav>ul>li
+
+SAIDA =>
+<nav>
+    <ul>
+        <li></li>
+    </ul>
+</nav>
+
+Elementos sequenciais
+
+Simbolo: +
+
+Ex:.
+
+nav>a+p
+
+<nav>
+    <a href=""></a>
+    <p></p>
+</nav>
+
+USAR CONTEUDO
+
+Simbolo: {}
+
+EX:. 
+
+nav>button{Salvar}
+
+<nav>
+    <button>
+        Salvar
+    </button>
+</nav>
+
+USAR CLASSE
+
+Simbolo: .
+
+EX:. 
+
+button.btn.btn-success
+
+<button class="btn btn-success"></button>
+
+USER ID
+
+Simbolo: #
+
+E:. button#btn
+
+<button id="btn"></button>
+
+VARIOS ITENS
+
+Simbolo: *
+
+Ex:. 
+ul>li*5
+
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+ITERADORES EM IDS
+
+Simbolo: $
+
+Ex:.
+
+ul>li*5#item$
+
+<ul>
+    <li id="item1"></li>
+    <li id="item2"></li>
+    <li id="item3"></li>
+    <li id="item4"></li>
+    <li id="item5"></li>
+</ul>
+
+COMENT FILTER (AJUDA A ENTENDER ONDE ACABA CADA SEÇÃO)
+
+Simbolo: | c 
+
+Ex:.
+
+section*5#secao$>article.conteudo>h1+p{Texto}|c
+
+
+
+<section id="secao1">
+        <article class="conteudo">
+            <h1></h1>
+            <p>Texto</p>
+        </article>
+        <!-- /.conteudo -->
+    </section>
+    <!-- /#secao1 -->
+    <section id="secao2">
+        <article class="conteudo">
+            <h1></h1>
+            <p>Texto</p>
+        </article>
+        <!-- /.conteudo -->
+    </section>
+    <!-- /#secao2 -->
+    <section id="secao3">
+        <article class="conteudo">
+            <h1></h1>
+            <p>Texto</p>
+        </article>
+        <!-- /.conteudo -->
+    </section>
+    <!-- /#secao3 -->
+    <section id="secao4">
+        <article class="conteudo">
+            <h1></h1>
+            <p>Texto</p>
+        </article>
+        <!-- /.conteudo -->
+    </section>
+    <!-- /#secao4 -->
+    <section id="secao5">
+        <article class="conteudo">
+            <h1></h1>
+            <p>Texto</p>
+        </article>
+        <!-- /.conteudo -->
+    </section>
+    <!-- /#secao5 -->
+    
+    
+    
+    
+    *********************************************************************************************************
+    
+    Aulas
+Se você estiver familiarizado com CSS, Emmet usa a mesma maneira para se referir a classes usando um .. Para definir uma classe junto com a tag, basta adicioná-la assim:
+
+div.wrapper -> <div class="wrapper"></div>
+h1.header.center -> <h1 class="header center"></h1>
+ID’s
+O trabalho do Id é praticamente o mesmo:
+
+div#hero -> <div id="hero"></div>
+Combinando
+Você pode encadear estes juntos:
+
+div#hero.wrapper -> <div id="hero" class="wrapper"></div>
+Atributos
+Também podemos especificar atributos para tags:
+
+img[src="https://www.freecodecamp.org/news/write-html-css-faster-with-emmet-cheat-codes/cat.jpg"][alt="Cute cat pic"] -> <img src="https://www.freecodecamp.org/news/write-html-css-faster-with-emmet-cheat-codes/cat.jpg" alt="Cute cat pic" />
+Conteúdo
+Para incluir conteúdo dentro da tag, simplesmente envolvemos o conteúdo entre chaves, { }.
+
+p{This is a paragraph} -> <p>This is a paragraph</p>
+Irmãos e Filhos
+Está cada vez melhor. Também podemos especificar irmãos e filhos usando o + e > personagens.
+
+section+section -> <section></section><section></section>
+ul>li -> 
+<ul>
+    <li>
+    </li>
+</ul>
+Subindo
+Você tem que tentar imaginar o que está construindo em sua cabeça enquanto digita a abreviação de Emmet. Neste exemplo, vamos “escalar” a árvore usando ^.
+
+div+div>p>span+em^bq
+
+Resultado:
+
+<div>
+</div>
+<div>
+    <p>
+        <span>
+        </span>
+        <em>
+        </em>
+    </p>
+    <blockquote>
+    </blockquote>
+</div>
+
+Aqui, queríamos que o blockquote estivesse no mesmo nível do parágrafo. Por isso, precisávamos “subir”. Caso contrário, estaria dentro do parágrafo.
+
+Agrupamento
+Se sua estrutura for muito complexa, convém agrupar tags em vez de percorrer por escalada.
+
+Neste exemplo, vamos criar um cabeçalho e rodapé sem escalar usando parênteses ( ).
+
+div>(header>ul>li>a)+footer>p
+
+Resultado:
+
+<div>
+    <header>
+        <ul>            
+        <li>
+        <a href=""></a>
+        </li>        
+        </ul>    
+    </header>    
+    <footer>        
+        <p></p>    
+    </footer>
+</div>
+
+
+Multiplicação e $
+Podemos gerar várias tags multiplicando (*) e numere os itens em sequência usando um cifrão ($)
+
+ul>li*5 -> 
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+ul>li{Item $}*3 -> <ul><li>Item 1</li><li>Item 2</li><li>Item 3</li></ul>
+Você pode até personalizar a sequência de numeração preenchendo com zeros, começando com um número específico e até mesmo inverter a direção.
+
+Bloco com zeros: ul>li.item$$$*5
+
+Resultado:
+
+<ul>    
+    <li class="item001"></li>    
+    <li class="item002"></li>    
+    <li class="item003"></li>    
+    <li class="item004"></li>    
+    <li class="item005"></li>
+</ul>
+
+Comece com um número específico: ul>li.item$@3*5
+
+Resultado:
+
+<ul>    
+    <li class="item3"></li>    
+    <li class="item4"></li>    
+    <li class="item5"></li>    
+    <li class="item6"></li>    
+    <li class="item7"></li>
+</ul>
+
+Direção oposta: ul>li.item$@-*5
+
+Resultado:
+
+<ul>
+    <li class="item5"></li>
+    <li class="item4"></li>
+    <li class="item3"></li>
+    <li class="item2"></li>
+    <li class="item1"></li>
+</ul>
+
+Inverter direção de um número específico: ul>li.item$@-3*5
+
+Resultado:
+
+<ul>    
+    <li class="item7"></li>    
+    <li class="item6"></li>    
+    <li class="item5"></li>    
+    <li class="item4"></li>    
+    <li class="item3"></li>
+</ul>
+
+Nomes de tags implícitos
+Existem certas tags que não precisam ser digitadas e podem estar implícitas.
+
+Uma classe definida inicialmente sem tag será implicada como um <div>.
+.wrapper -> <div class="wrapper"></div>
+Uma classe definida dentro de uma tag de ênfase estará implícita como um <span>.
+em>.emphasis -> <em><span class="emphasis"></span></em>
+Uma classe definida em uma lista será incluída como um item de lista.
+ul>.item -> <ul><li class="item"></li></ul>
+Uma classe definida em uma tabela será implicada como um <tr> e dentro de uma linha seria um <td>.
+table>.row>.col -> <table><tr class="row"><td class="col"></td></tr></table>
+Wrap with Tags
+Haverá momentos em que você terá um código existente que deseja agrupar com uma tag. Podemos fazer isso facilmente com Emmet.
+
+Basta destacar o código que deseja embrulhar e abrir a paleta de comandos (F1) Em seguida, procure por Emmet: Wrap with Abbreviation. Em seguida, será apresentada uma caixa de diálogo onde você pode digitar o elemento.
+
+test -> <div>test</div>
+
+Você também pode usar a sintaxe Emmet padrão nesta caixa de diálogo. Tente embrulhar algum texto com span.wrapper.
+
+Por padrão, essa funcionalidade não é atribuída a um atalho de teclado. Portanto, se você o usa com frequência, pode adicionar um atalho personalizado para ele.
+
+Lorem Ipsum
+“Lorem Ipsum” é um texto fictício usado por desenvolvedores para representar dados em uma página. Basta digitar lorem e bater Enter. Emmet irá gerar 30 palavras de texto falso que você pode usar como preenchimento em seu projeto.
+
+A quantidade de palavras geradas também pode ser definida.
+
+lorem10 lhe dará 10 palavras de texto aleatório.
+Juntando tudo
+Vamos usar várias coisas que aprendemos até agora. Experimente:
+
+ul.my-list>lorem10.item-$*5
+
+Resultado:
+
+<ul class="my-list">  <li class="item-1">Lorem ipsum dolor sit amet.</li>  <li class="item-2">Numquam repudiandae fuga porro consequatur?</li>  <li class="item-3">Culpa, est. Tenetur, deleniti nihil?</li>  <li class="item-4">Numquam architecto corrupti quam repudiandae.</li></ul>
+CSS
+Em CSS, Emmet tem uma abreviatura para cada propriedade. Não vou listar todos, mas vou apontar os mais usados. Para ver a lista completa, consulte o Emmet folha de dicas.
+
+Posição
+pos -> position:relative; (o padrão é relativo)
+pos:s -> position:static;
+pos:a -> position:absolute;
+pos:r -> position:relative;
+pos:f -> position:fixed;
+Exibição
+d -> display:block; (o padrão é bloquear)
+d:n -> display:none;
+d:b -> display:block;
+d:f -> display:flex;
+d:if -> display:inline-flex;
+d:i -> display:inline;
+d:ib -> display:inline-block;
+Cursor
+Cor
+c -> color:#000;
+c:r -> color:rgb(0, 0, 0);
+c:ra -> color:rgba(0, 0, 0, .5);
+op -> opacity: ;
+Margem e preenchimento
+m -> margin: ;
+m:a -> margin:auto;
+mt -> margin-top: ;
+mr -> margin-right: ;
+mb -> margin-bottom: ;
+ml -> margin-left: ;
+p -> padding: ;
+pt -> padding-top: ;
+pr -> padding-right: ;
+pb -> padding-bottom: ;
+pl -> padding-left: ;
+Dimensionamento da caixa
+bxz -> box-sizing:border-box;
+Largura
+w -> width: ;
+h -> height: ;
+maw -> max-width: ;
+mah -> max-height: ;
+miw -> min-width: ;
+mih -> min-height: ;
+Fronteira
+bd -> border: ;
+bd+ -> border:1px solid #000;
+bd:n -> border:none;
+Emmet é incrível!
+Com Emmet, você pode criar uma estrutura HTML realmente complexa com uma linha. É realmente incrível. E também funciona com CSS.
+
+

@@ -1,0 +1,81 @@
+/* Seleciona todos os elementos existentes no html*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/*
+TRANSITION
+
+transition
+transition-delay
+transition-duration
+transition-property
+transition-timing-function
+
+all = Significa que a transição será aplicada para todas as tranformações do elemento, seja cor, altura, largura.
+
+A propriedade da função de tempo de transição pode ter os seguintes valores:
+
+ease- especifica um efeito de transição com um início lento, depois rápido e depois termina lentamente (este é o padrão)
+linear- especifica um efeito de transição com a mesma velocidade do início ao fim
+ease-in- especifica um efeito de transição com um início lento
+ease-out- especifica um efeito de transição com um final lento
+ease-in-out- especifica um efeito de transição com início e fim lentos
+cubic-bezier(n,n,n,n)- permite definir seus próprios valores em uma função cúbica-bezier
+
+OBS: No tempo pode-se utilizar a notação ms(milissegundos)
+
+*/
+
+h1 {
+  transition: all 0.5s ease-in-out;
+
+}
+
+h1:hover{
+  background-color: rgba(218, 120, 0, 0.5);
+}
+a {
+  text-decoration: none;
+}
+/*Para links não clicados*/
+a:link{
+  color: rgb(221, 30, 62);
+}
+/*Para links já visitados*/
+a:visited{
+  color: rgb(148, 221, 30);
+}
+/* A pseudoclasse active indica que o elemento esta pressionado (clicado) */
+
+a:active{
+  background-color: grey;
+}
+
+.caixinha {
+  margin: 10px;
+}
+
+input:focus{
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  outline: none;
+  border: 1px solid #000;
+
+}
+
+/* É habilitado toda a vez que o input é setado como disabled */
+input:disabled{
+  background-color:purple;
+  cursor: not-allowed;
+}
+
+/* input:enabled{
+  background-color: rgb(116, 75, 230);
+  cursor: pointer;
+} */
+
+input:checked + p {
+  background-color: rgb(75, 0, 0);
+  color:#fff;
+}

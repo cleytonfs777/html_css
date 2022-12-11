@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.grid {
+    padding: 15px;
+}
+
+.grid::after {
+    content:'';
+    display:block;
+    clear:both;
+}
+
+
+.grid .col {
+    /*Mistura display block com o display inline
+    display: inline-block;
+    */
+    width: 33.33%;
+    height: 300px;
+    /*Significa que o cada elemento vai flutuar para o lado escolhido e deixar seu espaço lateral liberado para qualquer outro equipamentos que queira ocupar*/
+    float:left;
+    padding: 15px;
+
+}
+.grid .col-content {
+    width: 100%;
+    height: 100%;
+    background: red;
+    border-radius: 15px;
+    /*            para dentro     deslocamento esq/dir    desloc cima/baixo   bloor(borrar)  espalhamento          cor
+    box-shadow:       inset               10px                      0               0              0              blue;
+    Pode mesclar sombra interna e externa
+    */
+    box-shadow: 0 0 15px 1px blue;
+}
+
+
+p {
+    /*Propriedade faz com que não haja elemntos a esquerda do p, ou seja, sua esquerda deve esta limpa (clear) podendo indicar o lado left ou rigth. Propriedade clear both limpa ambos os lados*/
+    clear: both;
+}
+
+/*@media são as chamadas medias query. São utilizadas para redimencionamento de conteúdos em determinados dispositivos para facilitar a manipulação dos mesmo*/
+
+@media (max-width: 320px) {
+    .grid .col {
+        width: 100%;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 768px){
+    .grid .col {
+    width: 50%;
+    }
+}

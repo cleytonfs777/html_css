@@ -1,0 +1,74 @@
+/*
+- UNIDADES DE MEDIDA ABSOLUTAS- Como o próprio nome diz ela é independente de outras medidas:
+
+px - (pixel) - ex: 12px
+
+- UNIDADES DE MEDIDA RELATIVAS- Tem relação com alguma outra medida:
+
+em - Se comporta de acordo com o elemento pai mais próximo a ele
+
+rem - Se baseia ou se comporta conforme o elemento root da página, ou seja o html. Se a font-size do html for 20px então só multiplicar
+
+vw - view port width- É o tamanho total da área visível no navegador 
+100vw - Vai de 0 a 100.
+
+vh - view port heigth - Mesma coisa do anterior porém com a altura. Essa é muito interessante para criar tela infinitas
+
+% - Vai ser sempre referente ao elemento pai. É a porcentagem do elemento pai
+*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    /*Faz com que a rolagem ocorra de forma mais suave*/
+    scroll-behavior: smooth;
+}
+.pai {
+    width: 100vw;
+    height: 100vh;
+    background: yellow;
+}
+.separate {
+    font-size: 1.6em;
+    margin: 0.5em;
+    text-decoration:none;
+}
+
+p {
+    /*Quando utilizamos pixels, essa é uma medida fixa, ou seja, ela não é relativa a nada portanto independente de redimencionamentos ela irá se manter
+    font-size: 20px;
+    */
+    /* quer dizer que o tamanho dessa fonte vai ser uma vez o tamanho da fonte do elemento pai
+    font-size: 1em;
+    */
+    font-size: 1.6rem;
+}
+
+.color-one {
+    background: purple;
+}
+
+.color-two {
+    background: black;
+}
+/*
+DICA
+
+O máximo que o navegador permite é 16px. Portanto teriamos que achar a quantos por cento da fonte do documento teriamos 1rem valendo 10px. Basta multiplicar os 16 px por 62,5% ou 0.625 acharemos o valor exato.
+Então basta deixar a porcentagem de fonte do Html com font-size: 62.5%
+
+*/
+
+/*Utilize links ancoras:
+Basta utilizar IDs para marcar cada em seção, e criar links no topo da pagina.
+
+no href de cada link vc usa " #<nome-do-id> "
+
+ex <div id="one">
+
+o link deverá ser <a href="#one">
+
+*/

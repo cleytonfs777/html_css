@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex-container {
+    display: flex;
+    /*Define qual é o eixo principal: row ou column. Tbm suporta row-reverse e column-reverse
+    flex-direction: row;
+    Tbm pode ser utilizado e é semelhante a inline-block
+    display:inline-flex;
+    */
+    /*Responsável por organizar o conteudo no eixo principal. Os principais são: flex-start, center, flex-end, space-arround, space-evenly e space-between */
+    justify-content: flex-start;
+    /* Permite o conteúdo, caso não consiga ocupar uma unica linha, oculpe outras linhas */
+    flex-wrap: wrap;
+    /*Responsável por organizar o conteudo no eixo relativo(cross). Os principais são: flex-start, center, flex-end, baseline, stretch */
+    align-items: flex-start;
+    /*Diferente do align-items, o align-content vai alinhar todo o conteudo ao centro*/
+    align-content: space-around;
+    background: yellow;
+    height: 640px;
+}
+
+.flex-item {
+    width: 33.33%;
+    background: red;
+    color: #fff;
+    margin: 10px;
+}

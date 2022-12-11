@@ -1,0 +1,25 @@
+.texto{
+    /*content-box significa que tudo que é relacionado a largura e altura só trabalha o conteúdo, ou seja margin, padding e border são somados ao conteúdo
+    box-sizing: content-box;
+    */
+    box-sizing: border-box;
+    /* Utilizando a propriedade inline ele não pega essas configurações pq o programa entende que não tem tamanho, é em linha. E tbm não vai pegar fundo e etc */
+    display: block;
+    background: rgb(180, 23, 23);
+    width: 100%;
+    height: 100%;
+    /* Propriedade overflow diz respeito ao comportamento do elemento após o texto extravazar, podendo colocar apenas overflow ou especificar o eixo escolhido Ex:. overflow-x e overflow-y. Pode ser dada a propriedade hidden ou scroll */
+    /*
+    overflow-y: scroll;
+    Quando utilizamos a opção scroll, a barrinha de scroll aparece independente de ter conteúdo passando ou não. O ideal é utilizar a opção auto
+    */
+    overflow: auto;
+    max-width: 600px;
+    max-height: 100%;
+    min-width: 0;
+    min-height: 0;
+    /* Ajusta o texto ao meio */
+    margin: 0 auto 50px auto;
+    padding: 50px;
+    border: 5px solid #000;
+}
