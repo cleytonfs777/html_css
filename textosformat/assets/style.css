@@ -5,6 +5,7 @@ p {
     direction: ltr;
     letter-spacing: 8px;
     word-spacing: 40px; */
+    /*Trata-se da altura entre as linhas*/
     line-height: 70px;
     text-align: left;
     /* text-decoration: line-through; 
